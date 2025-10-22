@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="easy_django_csv",
-    version="0.1.0",
+    version="0.1.1",
     author="Alex Dickens",
     author_email="alex@calmdigital.com",
     description="Simple CSV export for Django",
