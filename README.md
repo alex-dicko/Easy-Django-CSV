@@ -13,7 +13,7 @@ pip install easy-django-csv
 
 The simplest way to export data with manual row management:
 ```python
-from easy_django_csv import CSVExporter
+from easy_django_csv.exporters import CSVExporter
 
 def export_users(request):
     exporter = CSVExporter(
@@ -31,7 +31,7 @@ def export_users(request):
 
 Automatically export a Django model with custom serializer:
 ```python
-from easy_django_csv import ModelCSVExport
+from easy_django_csv.exporters import ModelCSVExport
 
 def export_users(request):
     def user_serializer(user):
@@ -51,7 +51,7 @@ def export_users(request):
 
 Let the exporter generate headers from model fields:
 ```python
-from easy_django_csv import ModelCSVExport
+from easy_django_csv.exporters import ModelCSVExport
 
 def export_users(request):
     exporter = ModelCSVExport(
@@ -68,7 +68,7 @@ def export_users(request):
 
 For datasets with thousands of rows, use streaming to reduce memory usage:
 ```python
-from easy_django_csv import StreamingModelCSVExport
+from easy_django_csv.exporters import StreamingModelCSVExport
 
 def export_users(request):
     exporter = StreamingModelCSVExport(
@@ -85,7 +85,7 @@ def export_users(request):
 
 Export all fields from a model automatically:
 ```python
-from easy_django_csv import export_model
+from easy_django_csv.exporters import export_model
 
 def export_users(request):
     return export_model(User.objects.all())

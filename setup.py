@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 
 setup(
     name="easy_django_csv",
-    version="0.1.1",
+    version="0.1.3",
     author="Alex Dickens",
     author_email="alex@calmdigital.com",
     description="Simple CSV export for Django",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/alex-dicko/easy_django_csv",
+    url="https://github.com/alex-dicko/Easy-Django-CSV",
     packages=find_packages(),
     install_requires=[
         "Django>=3.2",
